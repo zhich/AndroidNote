@@ -17,7 +17,7 @@
 
 > tip：我们只需要在convertView为null时设置监听事件即可，不需要在每次执行getView时重复设置，避免重复创建监听事件对象。
 
-MainActivity.java的关键代码：
+MainActivity.java的代码：
 
 ```java
 public class MainActivity extends Activity {
@@ -49,7 +49,7 @@ public class MainActivity extends Activity {
 }
 ```
 
-activity_main.xml的关键代码：
+activity_main.xml的代码：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -67,7 +67,7 @@ activity_main.xml的关键代码：
 </LinearLayout>
 ```
 
-item_user.xml的关键代码：
+item_user.xml的代码：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -101,7 +101,7 @@ item_user.xml的关键代码：
 
 ```
 
-User.java的关键代码：
+User.java的代码：
 
 ```java
 public class User {
@@ -120,7 +120,7 @@ public class User {
 }
 ```
 
-UserAdapter.java的关键代码：
+UserAdapter.java的代码：
 
 ```java
 public class UserAdapter extends BaseAdapter {
@@ -215,7 +215,7 @@ holder.btnRegister.setTag(Integer.valueOf(position));
 
 
 
-CommonUtils.java的关键代码：
+CommonUtils.java的代码：
 
 ```java
 public class CommonUtils {
