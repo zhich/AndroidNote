@@ -5,7 +5,7 @@
 * [ListView的优化方案](https://github.com/zhich/Note/blob/master/Android/ListView的优化方案.md)
 * [Service和Thread的区别](https://github.com/zhich/Note/blob/master/Android/Service和Thread的区别.md)
 * [Android退出应用最优雅的方式](https://github.com/zhich/Note/blob/master/Android/Android退出应用最优雅的方式.md)
-
+* [AndroidStudio的一些使用技巧](https://github.com/zhich/Note/blob/master/Android/AndroidStudio的一些使用技巧.md)
 
 
 ## Java

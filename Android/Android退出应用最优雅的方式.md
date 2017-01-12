@@ -3,7 +3,8 @@
 
 我们打开一个app，首先是一个splash页面，然后会finish掉splash页面。跳转到主页。然后会在主页进行N次的跳转，期间会产生数量不定的Activity，有的被销毁，有的驻留在栈中，但是栈底永远是我们的MainActivity。这样就让问题变得简单很多了。我们只需两步操作即可优雅的实现app的退出。
 
-- 在MainActivity注册一个退出广播，只需要在MainActivity一个页面注册即可。设置MainActivity的启动模式为singleTask。- 当我们需要退出的时候只需要startActivity(this,MainActivity,class)， 再发送一个退出广播。
+- 在MainActivity注册一个退出广播，只需要在MainActivity一个页面注册即可。设置MainActivity的启动模式为singleTask。
+- 当我们需要退出的时候只需要startActivity(this,MainActivity,class)， 再发送一个退出广播。
 
 上面代码首先会把栈中MainActivity之上的所有Activity移出栈，然后接到广播finish自己。没有弹框，不用考虑机型Rom适配。不会有内存问题。
 
@@ -13,7 +14,7 @@
 我们来验证一下：
 在MainActivity中有一个按钮，点击它将跳转到SecondActivity。在SecondActivity中也有一个按钮，点击它将跳转到MainActivity，同时发出退出应用的广播。
 
-MainActivity的关键代码如下：
+MainActivity的代码如下：
 
 ```Java
 public class MainActivity extends Activity {
@@ -95,7 +96,7 @@ public class MainActivity extends Activity {
 }
 ```
 
-SecondActivity的关键代码如下：
+SecondActivity的代码如下：
 
 ```Java
 public class SecondActivity extends Activity {
@@ -119,7 +120,7 @@ public class SecondActivity extends Activity {
 }
 ```
 
-AndroidManifest.xml的关键代码如下：
+AndroidManifest.xml的代码如下：
 
 ```xml
 <activity android:launchMode="singleTask" android:name=".MainActivity">
@@ -158,4 +159,4 @@ MainActivity打印的日志如下：
 01-08 21:11:23.690 18293-18293/com.zch.demo D/MainActivity: onResume
 ```
 
-这样也说明了singleTask模式只是复用MainActivity，而不会执行onCreate去重建。
+这样也说明了singleTask模式只是复用MainActivity，而不会执行onCreate去重建MainActivity。
