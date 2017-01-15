@@ -20,4 +20,4 @@ public class MyClass {
 
 点击菜单的Run->Edit Configuration，然后点击+选择Application。
 
-![a.png](https://github.com/zhich/Note/blob/master/picture/在AndroidStudio中创建java应用/a.png)
+![a.png](https://github.com/zhich/Note/blob/master/picture/AndroidStudio中创建java应用/a.png)
