@@ -62,6 +62,7 @@
 	//可以写成这个样子，! 的优先级比 && 高，不需括号
  	if (null != str && !"".equals(str)) {
  	}
+
  	//更好的做法
  	if (!TextUtils.isEmpty(str)) {
  	}
@@ -114,7 +115,7 @@
  	try {
         	cursor = context.getContentResolver().query(Uri.parse(PROVIDER_SETTINGFILE), null, null, null, null);
         	if (null == cursor) { // cursor 为 null，下面没法玩
-           	return;
+           		return;
         	}
         	//省略 n 行代码...
     	} catch (Exception e) {
@@ -172,16 +173,16 @@
 
      ```Java
     public int testIfElse(String cmd) {
-    	if ("1".equals(cmd)) {
-			return 1;
-		} else if ("2".equals(cmd)) {
-			return 2;
-		} else if ("3".equals(cmd)) {
-			return 3;
-		} else {
-			return 4;
-		}
-	}
+    	 if ("1".equals(cmd)) {
+			 return 1;
+		 } else if ("2".equals(cmd)) {
+			 return 2;
+		 } else if ("3".equals(cmd)) {
+			 return 3;
+		 } else {
+			 return 4;
+		 }
+	 }
     ```
 
      better：
