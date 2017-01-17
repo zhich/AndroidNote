@@ -167,9 +167,9 @@
 
     > 很多比较复杂的层级判断都可以从这些判断的反面出发，来降低程序的复杂性，从而提高可读性。
 
-   * if 与 return 同用
+  * if 与 return 同用
 
-     bad：
+    bad：
 
      ```Java
     public int testIfElse(String cmd) {
@@ -185,22 +185,22 @@
 	 }
     ```
 
-     better：
+    better：
 
-    ```Java
+     ```Java
     public int testIfElse(String cmd) {
-    	if ("1".equals(cmd)) {
-			return 1;
-		}
-		if ("2".equals(cmd)) {
-			return 2;
-		}
-		if ("3".equals(cmd)) {
-			return 3;
-		}
-		return 4;
-	}
-    ```
+        if ("1".equals(cmd)) {
+            return 1;
+        }
+        if ("2".equals(cmd)) {
+            return 2;
+        }
+        if ("3".equals(cmd)) {
+            return 3;
+        }
+        return 4;
+    }
+   ```
 
 
 
