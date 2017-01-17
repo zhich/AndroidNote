@@ -8,7 +8,7 @@
 * [AndroidStudio的一些使用技巧](https://github.com/zhich/Note/blob/master/Android/AndroidStudio的一些使用技巧.md)
 * [AndroidStudio中创建Java应用](https://github.com/zhich/Note/blob/master/Android/AndroidStudio中创建Java应用.md)
 * [AndroidStudio添加butterknife依赖](https://github.com/zhich/Note/blob/master/Android/AndroidStudio添加butterknife依赖.md)
-* [容易犯的错误](https://github.com/zhich/Note/blob/master/Android/容易犯的错误.md)
+* [Android中容易犯的错误](https://github.com/zhich/Note/blob/master/Android/Android中容易犯的错误.md)
 
 
 ## Java
