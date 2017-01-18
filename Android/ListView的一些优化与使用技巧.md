@@ -1,21 +1,24 @@
-- [优化](#优化)
-  - [基本原则](#基本原则)
-  - [item监听事件复用](#item监听事件复用)
+- [优化](#a1)
+  - [基本原则](#a11)
+  - [item监听事件复用](#a12)
 
 
-- [使用技巧](#使用技巧)
-  - [设置item间的分割线](#设置item间的分割线)
-  - [取消item的点击效果](#取消item的点击效果)
-  - [设置ListView显示位置](#设置ListView显示位置)
-  - [遍历ListView中所有item](#遍历ListView中所有item)
-  - [处理空ListView](#处理空ListView)
-  - [自动显示、隐藏布局的ListView](#自动显示、隐藏布局的ListView)
+- [使用技巧](#b1)
+  - [设置item间的分割线](#b11)
+  - [取消item的点击效果](#b12)
+  - [设置ListView显示位置](#b13)
+  - [遍历ListView中所有item](#b14)
+  - [处理空ListView](#b15)
+  - [自动显示、隐藏布局的ListView](#b16)
 
 
 
-## 优化
 
-### 基本原则
+
+
+<h2 id="a1">优化<h2>
+
+<h3 id="a11">基本原则<h3>
 
 - 如果自定义适配器，那么在getView方法中要考虑方法传进来的参数contentView是否为null，如果为null就创建contentView并返回，如果不为null则直接使用。在这个方法中尽可能少创建view。
 - 给contentView设置tag（setTag()），传入一个ViewHolder对象，用于缓存要显示的数据，可以达到图像数据异步加载的效果。
@@ -23,7 +26,8 @@
 
 
 
-### item监听事件复用
+
+<h3 id="a12">item监听事件复用<h3>
 
 比如在一个MainActivity中有一个ListView，ListView中的每一个item显示用户名、登录按钮、注册按钮。其中，对登录按钮和注册按钮设置监听事件。
 
@@ -256,9 +260,9 @@ public class CommonUtils {
 
 
 
-## 使用技巧
+<h2 id="b1">使用技巧<h2>
 
-### 设置item间的分割线
+<h3 id="b11">设置item间的分割线<h3>
 
 divider: 设置分割线，可以为颜色或者图片资源。
 
@@ -266,7 +270,7 @@ dividerHeight: 设置分割线的高度。
 
 
 
-### 取消item的点击效果
+<h3 id="b12">取消item的点击效果<h3>
 
 ```xml
 android:listSelector=”#00000000” 或者 android:listSelector=”@android:color/transparent”
@@ -274,7 +278,7 @@ android:listSelector=”#00000000” 或者 android:listSelector=”@android:col
 
 
 
-### 设置ListView显示位置
+<h3 id="b13">设置ListView显示位置<h3>
 
 ```Java
 mListView.setSelection(N);
@@ -282,7 +286,7 @@ mListView.setSelection(N);
 
 
 
-### 遍历ListView中所有item
+<h3 id="b14">遍历ListView中所有item<h3>
 
 ListView 作为一个 ViewGroup，为我们提供了操纵子 View 的各种方法。
 
@@ -296,7 +300,7 @@ for(int i = 0 ; i<mListView.getChildCount(); i++){
 
 
 
-### 处理空ListView
+<h3 id="b15">处理空ListView<h3>
 
 ListView提供了一个方法 setEmptyView(View emptyView)，通过这个方法可以给 ListView 设置一个在空数据下显示的默认提示界面。布局和Activity中的代码如下。
 
@@ -323,7 +327,7 @@ mListView.setEmptyView(findViewById(R.id.empty_view));
 
 
 
-### 自动显示、隐藏布局的ListView
+<h3 id="b16">自动显示、隐藏布局的ListView<h3>
 
 当用户对 ListView 进行上拉操作时标题栏消失，而进行下拉操作时标题栏又重现。
 
