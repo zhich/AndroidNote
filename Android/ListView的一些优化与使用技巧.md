@@ -3,14 +3,14 @@
   - [基本原则](#基本原则)
 
 
-  - [item监听事件复用](#item监听事件复用)
+- [item监听事件复用](#item监听事件复用)
 
 - [使用技巧](#使用技巧)
 
-  - [设置 item 间的分割线](#设置 item 间的分割线)
-  - [取消 item 的点击效果](#取消 item 的点击效果)
-  - [设置 ListView 显示位置](#设置 ListView 显示位置)
-  - [遍历 ListView 中所有 item](#遍历 ListView 中所有 item)
+    - [设置 item 间的分割线](#设置 item 间的分割线)
+    - [取消 item 的点击效果](#取消 item 的点击效果)
+    - [设置 ListView 显示位置](#设置 ListView 显示位置)
+    - [遍历 ListView 中所有 item](#遍历 ListView 中所有 item)
 
 
 
@@ -256,7 +256,7 @@ public class CommonUtils {
 
 效果图：
 
-![a.png](https://github.com/zhich/Note/blob/master/picture/ListView的优化方案/a.png)
+![a.png](https://github.com/zhich/Note/blob/master/picture/ListView的一些优化与使用技巧/a.png)
 
 
 
