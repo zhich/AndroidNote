@@ -1,9 +1,8 @@
 - [优化](#优化)
 
   - [基本原则](#基本原则)
+  - [item监听事件复用](#item监听事件复用)
 
-
-- [item监听事件复用](#item监听事件复用)
 
 - [使用技巧](#使用技巧)
 
@@ -11,8 +10,8 @@
     - [取消 item 的点击效果](#取消 item 的点击效果)
     - [设置 ListView 显示位置](#设置 ListView 显示位置)
     - [遍历 ListView 中所有 item](#遍历 ListView 中所有 item)
-
-
+    - [处理空 ListView](#处理空 ListView)
+    - [自动显示、隐藏布局的 ListView](#自动显示、隐藏布局的 ListView)
 
 
 
@@ -293,8 +292,158 @@ ListView 作为一个 ViewGroup，为我们提供了操纵子 View 的各种方�
 最常用的就是通过 getChildAt() 来获取第 i 个子 View.
 
 ```Java
-For(int i = 0 ; i<mListView.getChildCount(); i++){
+for(int i = 0 ; i<mListView.getChildCount(); i++){
     View view =mListView.getChildAt(i);
+}
+```
+
+
+
+## 处理空 ListView
+
+ListView提供了一个方法 setEmptyView(View emptyView)，通过这个方法可以给 ListView 设置一个在空数据下显示的默认提示界面。布局和Activity中的代码如下。
+
+```xml
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ImageView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@+id/mipmap/ic_launcher" />
+</FrameLayout>
+```
+
+```Java
+ListView mListView = (ListView)this.findViewById(R.id.listview);
+mListView.setEmptyView(findViewById(R.id.empty_view));
+```
+
+
+
+## 自动显示、隐藏布局的 ListView
+
+当用户对 ListView 进行上拉操作时标题栏消失，而进行下拉操作时标题栏又重现。
+
+Activity代码：
+
+```Java
+public class ScrollHideListView extends Activity {
+    private Toolbar mToolbar;
+    private ListView mListView;
+    private String[] mStr = new String[20];
+    private int mTouchSlop;
+    private float mFirstY;
+    private float mCurrentY;
+    private int direction;
+    private ObjectAnimator mAnimator;
+    private boolean mShow = true;
+    View.OnTouchListener myTouchListener = new View.OnTouchListener() {
+        @Override
+        public boolean onTouch(View v, MotionEvent event) {
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    mFirstY = event.getY();
+                    break;
+                case MotionEvent.ACTION_MOVE:
+                    mCurrentY = event.getY();
+                    if (mCurrentY - mFirstY > mTouchSlop) {
+                        direction = 0;// down
+                    } else if (mFirstY - mCurrentY > mTouchSlop) {
+                        direction = 1;// up
+                    }
+                    if (direction == 1) {
+                        if (mShow) {
+                            toolbarAnim(1);//hide
+                            mShow = !mShow;
+                        }
+                    } else if (direction == 0) {
+                        if (!mShow) {
+                            toolbarAnim(0);//show
+                            mShow = !mShow;
+                        }
+                    }
+                    break;
+                case MotionEvent.ACTION_UP:
+                    break;
+            }
+            return false;
+        }
+    };
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.scroll_hide);
+        //获取系统默认的最低滑动距离，超过它系统就定义为滑动状态
+        mTouchSlop = ViewConfiguration.get(this).getScaledTouchSlop();
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mListView = (ListView) findViewById(R.id.listview);
+        for (int i = 0; i < mStr.length; i++) {
+            mStr[i] = "Item " + i;
+        }
+        View header = new View(this);
+        //获取系统Actionbar的高度，并设置给header
+        header.setLayoutParams(new AbsListView.LayoutParams(
+                AbsListView.LayoutParams.MATCH_PARENT,
+                (int) getResources().getDimension(
+                        R.dimen.abc_action_bar_default_height_material)));
+        mListView.addHeaderView(header);
+        mListView.setAdapter(new ArrayAdapter<String>(
+                ScrollHideListView.this,
+                android.R.layout.simple_expandable_list_item_1,
+                mStr));
+        mListView.setOnTouchListener(myTouchListener);
+    }
+	//控制布局显示隐藏的动画
+    private void toolbarAnim(int flag) {
+        if (mAnimator != null && mAnimator.isRunning()) {
+            mAnimator.cancel();
+        }
+        if (flag == 0) {
+            mAnimator = ObjectAnimator.ofFloat(mToolbar,
+                    "translationY", mToolbar.getTranslationY(), 0);
+        } else {
+            mAnimator = ObjectAnimator.ofFloat(mToolbar,
+                    "translationY", mToolbar.getTranslationY(),
+                    -mToolbar.getHeight());
+        }
+        mAnimator.start();
+    }
+}
+```
+
+布局代码：
+
+```xml
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:headerDividersEnabled="false" />
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/holo_blue_light" />
+</RelativeLayout>
+```
+
+Google已经推荐使用Toolbar控件取代ActionBar了，因为它更加灵活，在使用时，一定要注意使用的theme一定是要NoActionBar的，否则会引起冲突，同时不要忘记引入编译。
+
+```groovy
+dependencies{
+    compile fileTree(include: ['*.jar'], dir:'libs')
+    compile'com.android.support:appcompat-v7:21.0.3'
 }
 ```
 
