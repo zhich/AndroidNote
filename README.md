@@ -10,6 +10,6 @@
 * [AndroidStudio添加butterknife依赖](https://github.com/zhich/Note/blob/master/Android/AndroidStudio添加butterknife依赖.md)
 * [Android中容易犯的错误](https://github.com/zhich/Note/blob/master/Android/Android中容易犯的错误.md)
 * [Android代码优化小提示](https://github.com/zhich/Note/blob/master/Android/Android代码优化小提示.md)
-
+* [收藏的一些Android资源](https://github.com/zhich/Note/blob/master/Android/收藏的一些Android资源.md)
 
 ## Java
