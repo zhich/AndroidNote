@@ -7,7 +7,7 @@
   - [设置ListView显示位置](#设置listview显示位置)
   - [遍历ListView中所有item](#遍历listview中所有item)
   - [处理空ListView](#处理空listview)
-  - [自动显示、隐藏布局的ListView](#自动显示、隐藏布局的listview)
+  - [自动显示与隐藏布局的ListView](#自动显示与隐藏布局的listview)
 
 
 
@@ -321,7 +321,7 @@ mListView.setEmptyView(findViewById(R.id.empty_view));
 
 
 
-### 自动显示、隐藏布局的ListView
+### 自动显示与隐藏布局的ListView
 
 当用户对 ListView 进行上拉操作时标题栏消失，而进行下拉操作时标题栏又重现。
 
