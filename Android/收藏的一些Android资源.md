@@ -48,6 +48,12 @@ http://www.eoeandroid.com/portal.php
 * Android代码查找<br>
 https://www.codota.com/
 
+* androidchina<br>
+http://www.androidchina.net/
+
+* 泡在网上的日子<br>
+http://www.jcodecraeer.com/plus/list.php?tid=16
+
 ### 架构设计
 * Hybrid APP架构设计思路<br>
 https://segmentfault.com/a/1190000004263182
