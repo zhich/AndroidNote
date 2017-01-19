@@ -2,7 +2,6 @@
   - [基本原则](#基本原则)
   - [item监听事件复用](#item监听事件复用)
 
-
 - [使用技巧](#使用技巧)
   - [设置item间的分割线](#设置item间的分割线)
   - [取消item的点击效果](#取消item的点击效果)
@@ -273,7 +272,7 @@ android:listSelector=”#00000000” 或者 android:listSelector=”@android:col
 ```
 
 
-
+sssssssssssss
 ### 设置ListView显示位置
 
 ```Java
@@ -439,8 +438,8 @@ Google已经推荐使用Toolbar控件取代ActionBar了，因为它更加灵活�
 
 ```groovy
 dependencies{
-    compile fileTree(include: ['*.jar'], dir:'libs')
-    compile'com.android.support:appcompat-v7:21.0.3'
+    compile fileTree(include: ['*.jar'], dir:'libs')
+    compile'com.android.support:appcompat-v7:21.0.3'
 }
 ```
 
