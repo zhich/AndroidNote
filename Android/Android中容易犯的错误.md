@@ -1,10 +1,12 @@
+## 目录
 - [Frgment重叠解决方案](#frgment重叠解决方案)
 - [解决CheckBox的button和文字在不同Android版本间距不一致的问题](#解决checkbox的button和文字在不同android版本间距不一致的问题)
+- [你需要知道的Android拍照适配方案](#你需要知道的android拍照适配方案)
+- [Android快速读取联系人示例](#android快速读取联系人示例)
 
 
 
-
-## Frgment重叠解决方案
+### Frgment重叠解决方案
 如果只是消除重叠，其实很简单，重叠的原因是因为Activity在重建前保存了状态，重建后程序又新建了Fragment，导致重叠。
 那么，不让Activity保存状态不就好了？
 重写下以下的方法，里面什么也不做。
@@ -16,7 +18,7 @@ protected void onSaveInstanceState(Bundle outState) {
 }
 ```
 
-## 解决CheckBox的button和文字在不同Android版本间距不一致的问题
+### 解决CheckBox的button和文字在不同Android版本间距不一致的问题
 Checkbox设置完button属性后，文本和button之前在2.3以下没有padding，在4.0设备中确有相当大的padding。当然可以通过设置paddingLeft属性调整这个间距，但是这样4.0没问题，2.3问题又出来了。
 
 ​那怎么样来设置Checkbox的自定义选框且不产生padding的问题呢？
@@ -42,3 +44,9 @@ Checkbox设置完button属性后，文本和button之前在2.3以下没有paddin
 ```
 
 [原文地址](http://www.jianshu.com/p/0f464a2722de)
+
+###  你需要知道的Android拍照适配方案
+http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2016/0602/4323.html
+
+### Android快速读取联系人示例
+http://www.apkbus.com/android-95266-1-1.html
