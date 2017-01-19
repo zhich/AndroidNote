@@ -1,14 +1,13 @@
 - [优化](#优化)
   - [基本原则](#基本原则)
   - [item监听事件复用](#item监听事件复用)
-
 - [使用技巧](#使用技巧)
   - [设置item间的分割线](#设置item间的分割线)
   - [取消item的点击效果](#取消item的点击效果)
-  - [设置ListView显示位置](#设置ListView显示位置)
-  - [遍历ListView中所有item](#遍历ListView中所有item)
-  - [处理空ListView](#处理空ListView)
-  - [自动显示、隐藏布局的ListView](#自动显示、隐藏布局的ListView)
+  - [设置ListView显示位置](#设置listview显示位置)
+  - [遍历ListView中所有item](#遍历listview中所有item)
+  - [处理空ListView](#处理空listview)
+  - [自动显示、隐藏布局的ListView](#自动显示、隐藏布局的listview)
 
 
 
@@ -272,7 +271,7 @@ android:listSelector=”#00000000” 或者 android:listSelector=”@android:col
 ```
 
 
-sssssssssssss
+
 ### 设置ListView显示位置
 
 ```Java
