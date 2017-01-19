@@ -1,4 +1,4 @@
-
+## 目录
 - [数据相关](#数据相关)
     - [遍历一个List集合](#遍历一个list集合)
     - [遍历HashMap的最佳方法](#遍历hashmap的最佳方法)
@@ -10,8 +10,8 @@
 
 
 
-## 数据相关
-### 遍历一个List集合
+### 数据相关
+#### 遍历一个List集合
 
 bad：
 
@@ -39,7 +39,7 @@ for (int i = 0, size = userList.size(); i < size; i++) {
 > ①、第二种方式把 userList.size() 用变量 size 存值避免了每次迭代都去调用该方法（不要在 for 循环的第二个表达式的判		断调用对象的方法或字段）；②、把 user 变量的声明放到循环外边，避免每次使用都去声明一下 User 对象。
   	③、getCount() 方法的处理也类似，如用 int count = xxx.getCount() 缓存起来.
 
-### 遍历HashMap的最佳方法
+#### 遍历HashMap的最佳方法
 
 ```Java
 Map<String, User> userMap = new HashMap<>();
@@ -52,7 +52,7 @@ while (it.hasNext()) {
 }
 ```
 
-### 字符串
+#### 字符串
   * 判断字符串 str 是否为null或空串
 
  	bad：
@@ -78,7 +78,7 @@ while (it.hasNext()) {
    
    * xxxxx
 
-### 可能报空指针的情况
+#### 可能报空指针的情况
 
   * 判断一个字符串的内容是否为某值<br>
   	bad：
@@ -114,7 +114,7 @@ while (it.hasNext()) {
  	}
  	```
 
-### 常用资源释放
+#### 常用资源释放
   * Cursor
 
  	```Java
@@ -144,7 +144,7 @@ while (it.hasNext()) {
 
    * Handler
 
-### 其它
+#### 其它
   * 反面判断条件
 
     bad：
