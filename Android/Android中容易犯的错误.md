@@ -3,6 +3,7 @@
 - [解决CheckBox的button和文字在不同Android版本间距不一致的问题](#解决checkbox的button和文字在不同android版本间距不一致的问题)
 - [你需要知道的Android拍照适配方案](#你需要知道的android拍照适配方案)
 - [Android快速读取联系人示例](#android快速读取联系人示例)
+- [Android搜索把软键盘上的回车键改为搜索](#android搜索把软键盘上的回车键改为搜索)
 
 
 
@@ -50,3 +51,29 @@ http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2016/0602/4323.html
 
 ### Android快速读取联系人示例
 http://www.apkbus.com/android-95266-1-1.html
+
+### Android搜索把软键盘上的回车键改为搜索
+在xml的EditText控件添加如下代码：
+
+```xml
+android:imeOptions="actionSearch"
+android:singleLine="true"
+```
+
+在Java类添加如下代码：
+
+```Java
+edtKeyword.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (keyCode == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_UP) {
+                    // 先隐藏键盘
+                    ((InputMethodManager) getSystemService(INPUT_METHOD_SERVICE))
+                            .hideSoftInputFromWindow(CustomerSearchActivity.this.getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+                    //进行搜索操作的方法，在该方法中可以加入edtKeyword的非空判断
+                    // search();
+                }
+                return false;
+            }
+        });
+```
