@@ -8,9 +8,11 @@
 ### 性能调优工具Hugo
 在进行Android性能调优、减少应用卡顿时，寻找可优化的code是一个必要的过程。如何发现应用中的耗时任务甚至是耗时函数呢，如果可以在log中打印**每个方法的执行时间**，甚至把执行方法时的**输入输出参数**同时打印，绝对是非常棒的功能。
 
-幸运的是jake Wharton大神已经做出了这样的工具：Hugo。
+幸运的是jake Wharton大神已经做出了这样的工具：[Hugo](https://github.com/JakeWharton/hugo)。
 
-**添加依赖**
+**具体使用方法步骤：**
+
+**1、添加依赖**
 
 - 在Project的gradle中的buildscript领域中的dependencies领域里面添加如下代码：
 
@@ -24,11 +26,9 @@ classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
 apply plugin: 'com.jakewharton.hugo'
 ```
 
-**使用方法**
+**2、在代码里使用**
 
 只需在需要打印信息的方法上增加@DebugLog即可：
-
-**例子**
 
 ```Java
 public class MainActivity extends Activity {
@@ -63,5 +63,3 @@ public class MainActivity extends Activity {
 ```
 
 > 打印日志只会在debug builds发生，注解也不会在任何编译后的class文件出现。完全不影响非debug builds。
-
-[github地址](https://github.com/JakeWharton/hugo)
