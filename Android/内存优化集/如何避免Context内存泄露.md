@@ -2,7 +2,7 @@
 - [Activity类Context的内存泄露](#activity类context的内存泄露)
 - [static修饰的Activity](#static修饰的activity)
 - [static间接修饰Activity类Context](#static间接修饰activity类context)
-- [单例引用Activity类Context](单例引用activity类context)
+- [单例引用Activity类Context](#单例引用activity类context)
 - [非静态或匿名内部类执行耗时任务](#非静态或匿名内部类执行耗时任务)
 - [静态内部类持有外部类静态成员变量](#静态内部类持有外部类静态成员变量)
 - [Handler引起的内存泄漏](#handler引起的内存泄漏)
