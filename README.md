@@ -16,5 +16,8 @@
 * [进程存活率探究](https://github.com/zhich/Note/blob/master/Android/进程存活率探究.md)
 * [内存优化集](https://github.com/zhich/Note/blob/master/Android/内存优化集.md)
 * [Android的数据存储方式](https://github.com/zhich/Note/blob/master/Android/Android的数据存储方式.md)
+* [XML解析方式](https://github.com/zhich/Note/blob/master/Android/XML解析方式.md)
+* [Activity相关](https://github.com/zhich/Note/blob/master/Android/Activity相关.md)
+* [Service相关](https://github.com/zhich/Note/blob/master/Android/Service相关.md)
 
 ## Java
