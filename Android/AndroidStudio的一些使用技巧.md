@@ -92,7 +92,7 @@
 * Log 快捷模板
 
   在 onCreate 中输入 logi ，按 Enter 即可生成如下一条 Log 日志。相应地，其它级别的日志也可类似地快速生成。
-  
+
   ```Java
   Log.i(TAG, "onCreate: ");
   ```
@@ -116,7 +116,7 @@
 * Extract 的妙用
 
   **Extract 可以重构 Java 代码；抽取布局 XML 的一些属性作为 Style；抽取布局 Layout。**
-在代码中，Extract 可提取各种变量、参数、常量。如将一个局部变量提取为类的成员变量，将一个字符串的常量提取为全局的常量（可选择提取到这个类本身或新的类中）。
+  在代码中，Extract 可提取各种变量、参数、常量。如将一个局部变量提取为类的成员变量，将一个字符串的常量提取为全局的常量（可选择提取到这个类本身或新的类中）。
 
 * Image Asset && Vector Asset
 
@@ -125,7 +125,7 @@
 * 断点
 
   * 条件断点
-  
+
     满足某个条件时断住。在普通断点上右键，在弹出菜单的 Condition 中填入断点条件即可。如在循环里面需要 i == 5 时使用  断点，则在 Condition 输入 i == 5。
 
   * 临时断点
@@ -133,7 +133,7 @@
     执行一次断点后该断点就会消失。在当前行使用快捷键 (Fn) + Command + Option + F8，即可生成一个临时断点，临时断点上有一个数字“1”。
 
   * 异常断点
-    
+
     在 Run 菜单打开 View breakpoints 界面，点击右上角的 “+”，选择 Java Exception Breakpoints，并输入要监听的异常即可。如输入 NullPointerException，则在程序运行时不需设置任何断点，只要 App 因为 NullPointerException 异常而导致崩溃，系统就会在对应的地方自动断点并暂停。
 
   * 日志断点
@@ -152,17 +152,18 @@
 
   * 自定义模板
 
-    * 方法注释
+    *  方法注释
 
-      ①、打开设置，选择 “Live Templates”；②、点击右栏的加号，选择增加一个 Template Group，并在该 Group 下新增一个 Template；③、选中自定义的注释模板，如 ma ，在下方的编辑区域中进行注释代码的编辑，如下代码模板；④、经过这样的配置后，在方法前输入 “ma” 即可弹出该模板，按 Enter 键后确认输入。
+       ①、打开设置，选择 “Live Templates”；②、点击右栏的加号，选择增加一个 Template Group，并在该 Group 下新增一个 Template；③、选中自定义的注释模板，如 ma ，在下方的编辑区域中进行注释代码的编辑，如下代码模板；④、经过这样的配置后，在方法前输入 “ma” 即可弹出该模板，按 Enter 键后确认输入。
 
-      ```Java
-      /**
+       ```Java
+       /**
        * $desc$
        *
        * @author zch
        * create at $date$
        */
+       ```
       ```
 
     * 文件、类注释
@@ -182,18 +183,18 @@
 
       FileHeader模板：
 
-      ```Java
+    ```Java
       /*
        * ${NAME}      ${YEAR}-${MONTH}-${DAY}
        * Copyright (c) ${YEAR} jufuns. All right reserved.
        *
        */
       #if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
-      ```
+    ```
 
       MyActivity模板：
 
-      ```Java
+    ```Java
       #parse("FileHeader.java")
       import android.app.Activity;
       import android.os.Bundle;
@@ -204,11 +205,11 @@
                  super.onCreate(savedInstanceState);
           }
       }
-      ```
+    ```
 
       用 MyActivity 模板新建的 LoginActivity：
 
-      ```Java
+    ```Java
       /*
        * LoginActivity      2016-10-07
        * Copyright (c) 2016 jufuns. All right reserved.
@@ -232,11 +233,34 @@
             }
             
       }
-      ```
+    ```
 
       > 类似地，我们也可以建立 Adapter、单例等等的模板代码。
 
+* 立即停止 Android Studio 编译
+
+  你不小心在 Android Studio 中启动了编译，当你想要停止它，但却不能？
+
+  `Stop` 和 `Cancel` 操作根本不会有任何帮助。
+
+  最棘手的是，你点击`Cancel`后，但编译仍将继续，直到安装完成。
+
+  一个命令就可以停止它！
+
+  只需进入项目文件夹（在 AS 的 terminal 窗口），然后输入以下命令即可。
+
+  ```Java
+  mac
+  ./gradlew --stop
+
+  window
+  gradlew --stop
+  ```
+
+  就是这么简单，这个命令会杀死编译的守护进程，编译会立即停止。
+
 ### 插件
+
 * .ignore
 
    给 Git 项目生成最合适的 ignore 文件。
@@ -250,7 +274,7 @@
    可将一个 drawable 文件夹下的图像自动生成对应的 drawable selector，只要文件名符合安装要求的规范即可。
 
 * GsonFormat
-  
+
   可将一段 Json 生成所需的 Gson 实体。
 
 * ParcelableGenerate
