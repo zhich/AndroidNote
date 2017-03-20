@@ -15,5 +15,6 @@
 * [收藏的一些Android资源](https://github.com/zhich/Note/blob/master/Android/收藏的一些Android资源.md)
 * [进程存活率探究](https://github.com/zhich/Note/blob/master/Android/进程存活率探究.md)
 * [内存优化集](https://github.com/zhich/Note/blob/master/Android/内存优化集.md)
+* [Android的数据存储方式](https://github.com/zhich/Note/blob/master/Android/Android的数据存储方式.md)
 
 ## Java
