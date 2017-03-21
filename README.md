@@ -19,7 +19,9 @@
 * [XML解析方式](https://github.com/zhich/Note/blob/master/Android/XML解析方式.md)
 * [Activity相关](https://github.com/zhich/Note/blob/master/Android/Activity相关.md)
 * [Service相关](https://github.com/zhich/Note/blob/master/Android/Service相关.md)
+* [BroadcastReceiver相关](https://github.com/zhich/Note/blob/master/Android/BroadcastReceiver相关.md)
 * [SQLite相关](https://github.com/zhich/Note/blob/master/Android/SQLite相关.md)
+* [动画相关](https://github.com/zhich/Note/blob/master/Android/动画相关.md)
 * [其它](https://github.com/zhich/Note/blob/master/Android/其它.md)
 
 ## Java
