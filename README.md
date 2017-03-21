@@ -20,5 +20,11 @@
 * [Activity相关](https://github.com/zhich/Note/blob/master/Android/Activity相关.md)
 * [Service相关](https://github.com/zhich/Note/blob/master/Android/Service相关.md)
 * [SQLite相关](https://github.com/zhich/Note/blob/master/Android/SQLite相关.md)
+* [其它](https://github.com/zhich/Note/blob/master/Android/其它.md)
 
 ## Java
+
+- [生成MyEclipse注册码](https://github.com/zhich/Note/blob/master/Java/生成MyEclipse注册码.md)
+- [用Java程序进行编码转换](https://github.com/zhich/Note/blob/master/Java/用Java程序进行编码转换.md)
+- [一个Md5算法程序](https://github.com/zhich/Note/blob/master/Java/一个Md5算法程序.md)
+
