@@ -82,9 +82,9 @@
   <style name="Theme.YourApp" parent="android:style/Theme.Light">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
-</style>
+  </style>
   ```
-这样,控件的宽高默认都是wrap_content样式啦。
+  这样,控件的宽高默认都是wrap_content样式啦。
 
 ### 数据
 - Pair 这个类 可以用来存储存储一”组”数据。但不是key和value的关系。
@@ -101,17 +101,17 @@
         System.out.println(pair.getKey() + " = " + pair.getValue());
         it.remove(); // avoids a ConcurrentModificationException
     }
-}
+  }
   ```
 
 - 使用Java在一个区间内产生随机整数：
 
   ```Java
- public static int randInt(int min, int max) {
+   public static int randInt(int min, int max) {
     Random rand = new Random();
     int randomNum = rand.nextInt((max - min) + 1) + min;
     return randomNum;
-}
+  }
   ```
 
 - TextUtils 是一个非常好用的工具类，把 List 转成字符串，逗号分隔，逗号分隔的 String 字符串，切割成 List ，分别可以用 TextUtils 的 join 和 split 方法。如果要对 List 去重，则可以用 Collection 的 frequency 方法。
@@ -171,12 +171,12 @@
 
 - 后台service经常因为重启之类的出现onStartCommand()中的Intent传递的参数为null， 通过在onStartCommand()中的返回值改成return super.onStartCommand(intent, Service.START_REDELIVER_INTENT, startId); 可以解决问题。下面介绍几个flag的意思。
 
-  | flag                     | 解释       |
-  | -------------------------|-------------------------|
-  | START_STICKY             | 如果service进程被kill掉，保留service的状态为开始状态，但不保留递送的   intent对象。随后系统  会尝试重新创建service，由于服务状态为开始状态，所以创建服务后一定会调用onStartCommand(Intent,int,int)方法。如果在此期间没有任何启动命令被传递到service，那么参数Intent将为null。 |
-  | START_NOT_STICKY         | “非粘性的”。使用这个返回值时，如果在执行完onStartCommand后，服务被异常kill掉，系统不会自动重启该服务。 |
-  |START_REDELIVER_INTENT    |重传Intent。使用这个返回值时，如果在执行完onStartCommand后，服务被异常kill掉，系统会自动重启该服务，并将Intent的值传入。|
- |START_STICKY_COMPATIBILITY|START_STICKY的兼容版本，但不保证服务被kill后一定能重启。  |
+  | flag                       | 解释                                       |
+  | -------------------------- | ---------------------------------------- |
+  | START_STICKY               | 如果service进程被kill掉，保留service的状态为开始状态，但不保留递送的   intent对象。随后系统  会尝试重新创建service，由于服务状态为开始状态，所以创建服务后一定会调用onStartCommand(Intent,int,int)方法。如果在此期间没有任何启动命令被传递到service，那么参数Intent将为null。 |
+  | START_NOT_STICKY           | “非粘性的”。使用这个返回值时，如果在执行完onStartCommand后，服务被异常kill掉，系统不会自动重启该服务。 |
+  | START_REDELIVER_INTENT     | 重传Intent。使用这个返回值时，如果在执行完onStartCommand后，服务被异常kill掉，系统会自动重启该服务，并将Intent的值传入。 |
+  | START_STICKY_COMPATIBILITY | START_STICKY的兼容版本，但不保证服务被kill后一定能重启。     |
 
 - 在activity中调用 moveTaskToBack (boolean nonRoot)方法即可将activity 退到后台，注意不是finish()退出。
 
@@ -185,7 +185,7 @@
 - apache提供的一系列jar包：commons-lang.jar，commons-collections.jar，commons-beanutils.jar等，里面很多方法可能是你曾经用几十几百行代码实现过的，但是执行效率或许要差很多，比如：ArrayUtils，StringUtils……。
 
 - ActivityLifecycleCallbacks接口，用于在Application类中监听各Activity的状态变化。
-http://mp.weixin.qq.com/s?__biz=MzA3ODkzNzM3NQ==&mid=401277907&idx=1&sn=0b2246f5178292596fc3a8295283359c#rd
+  http://mp.weixin.qq.com/s?__biz=MzA3ODkzNzM3NQ==&mid=401277907&idx=1&sn=0b2246f5178292596fc3a8295283359c#rd
 
 - SystemClock.sleep() 这个方法在保证一定时间的 sleep 时很方便，通常我用来进行 debug 和模拟网络延时。
 
@@ -202,7 +202,7 @@ http://mp.weixin.qq.com/s?__biz=MzA3ODkzNzM3NQ==&mid=401277907&idx=1&sn=0b2246f5
 - 当Activity LauncherMode 为singleTask singleInstance时,使用startActivityForResult会立马返回，不能正常调用。具体请看：http://www.360doc.com/content/15/0123/14/12928831_443085580.shtml
 
 - android studio 2.1起已经支持jdk8了,使用的时候要在gradle中加上,需要把buildToolsVersion更新到24以上的版本。
-  
+
   ```groovy
   android {
     defaultConfig {
@@ -216,12 +216,14 @@ http://mp.weixin.qq.com/s?__biz=MzA3ODkzNzM3NQ==&mid=401277907&idx=1&sn=0b2246f5
         targetCompatibility 1.8
         sourceCompatibility 1.8
     }
-}
+  }
   ```
 
 - 如果你在 manifest 中把一个 activity 设置成 android:windowSoftInputMode="adjustResize"，那么 ScrollView（或者其它可伸缩的 ViewGroups）会缩小，从而为软键盘腾出空间。但是，如果你在 activity 的主题中设置了 android:windowFullscreen="true"，那么 ScrollView 不会缩小。这是因为该属性强制 ScrollView 全屏显示。然而在主题中设置 android:fitsSystemWindows="false" 也会导致 adjustResize 不起作用。
 
 - .gitignore只能忽略那些原来没有被track的文件，如果某些文件已经被纳入了版本管理中，则修改.gitignore是无效的。那么解决方法就是先把本地缓存删除（改变成未track状态），然后再提交：
+
+  ​
 
   ```sh
   git rm -r --cached .
