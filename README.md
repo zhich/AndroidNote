@@ -7,7 +7,6 @@
 * [Android退出应用最优雅的方式](https://github.com/zhich/Note/blob/master/Android/Android退出应用最优雅的方式.md)
 * [AndroidStudio的一些使用技巧](https://github.com/zhich/Note/blob/master/Android/AndroidStudio的一些使用技巧.md)
 * [AndroidStudio中创建Java应用](https://github.com/zhich/Note/blob/master/Android/AndroidStudio中创建Java应用.md)
-* [AndroidStudio添加butterknife依赖](https://github.com/zhich/Note/blob/master/Android/AndroidStudio添加butterknife依赖.md)
 * [项目开发中笔记](https://github.com/zhich/Note/blob/master/Android/项目开发中笔记.md)
 * [Android开发小提示](https://github.com/zhich/Note/blob/master/Android/Android开发小提示.md)
 * [Android代码优化小提示](https://github.com/zhich/Note/blob/master/Android/Android代码优化小提示.md)
