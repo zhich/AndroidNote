@@ -6,7 +6,7 @@
 
 - [Android](#android)
 - [Java](#java)
-- [Git](git)
+- [Git](#git)
 
 
 ### Android
