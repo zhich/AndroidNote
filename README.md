@@ -1,6 +1,15 @@
 > 说明：笔记内容为本人总结或从网上获取所得。
 
-## Android
+
+
+## 目录
+
+- [Android](#android)
+- [Java](#java)
+- [Git](git)
+
+
+### Android
 
 * [ListView的一些优化与使用技巧](https://github.com/zhich/Note/blob/master/Android/ListView的一些优化与使用技巧.md)
 * [Service和Thread的区别](https://github.com/zhich/Note/blob/master/Android/Service和Thread的区别.md)
@@ -26,9 +35,12 @@
 * [第三方框架基本使用](https://github.com/zhich/Note/blob/master/Android/第三方框架基本使用.md)
 * [其它](https://github.com/zhich/Note/blob/master/Android/其它.md)
 
-## Java
+### Java
 
 - [生成MyEclipse注册码](https://github.com/zhich/Note/blob/master/Java/生成MyEclipse注册码.md)
 - [用Java程序进行编码转换](https://github.com/zhich/Note/blob/master/Java/用Java程序进行编码转换.md)
 - [一个Md5算法程序](https://github.com/zhich/Note/blob/master/Java/一个Md5算法程序.md)
 
+### Git
+
+- [常用git命令](https://github.com/zhich/Note/blob/master/Git/常用git命令.md)
