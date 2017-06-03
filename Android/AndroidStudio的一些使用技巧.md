@@ -1,6 +1,19 @@
 ## 目录
 - [快捷键](#快捷键)
 - [技巧](#技巧)
+  - [演示模式](#演示模式)
+  - [Log快捷模板](#log快捷模板)
+  - [附加调试](#附加调试)
+  - [在文件系统中打开文件](#在文件系统中打开文件)
+  - [预览方法定义](#预览方法定义)
+  - [拆分窗口](#拆分窗口)
+  - [Extract的妙用](#extract的妙用)
+  - [ImageAsset和VectorAsset](#imageasset和vectorasset)
+  - [断点](#断点)
+  - [代码模板](#代码模板)
+  - [立即停止AndroidStudio编译](#立即停止androidstudio编译)
+  - [断点](#断点)
+
 - [插件](#插件)
 
 
@@ -89,7 +102,7 @@
 
   在菜单栏 View 选项 最下面可找到几种极为方便的演示模式。通过选择这几种模式可以在连接投影仪时非常方便地全屏显示代码区域。代码区在 mac 下可通过双指缩放进行代码区域的缩放。
 
-* Log 快捷模板
+* Log快捷模板
 
   在 onCreate 中输入 logi ，按 Enter 即可生成如下一条 Log 日志。相应地，其它级别的日志也可类似地快速生成。
 
@@ -113,12 +126,12 @@
 
   在编辑区域显示多个编辑界面：Window –> Editor Tabs –> Split vertical \ horizontal。
 
-* Extract 的妙用
+* Extract的妙用
 
   **Extract 可以重构 Java 代码；抽取布局 XML 的一些属性作为 Style；抽取布局 Layout。**
   在代码中，Extract 可提取各种变量、参数、常量。如将一个局部变量提取为类的成员变量，将一个字符串的常量提取为全局的常量（可选择提取到这个类本身或新的类中）。
 
-* Image Asset && Vector Asset
+* ImageAsset和VectorAsset
 
   可帮助快速创建不同分辨率的图像和 SVG 文件。要使用该功能，在 res 资源目录下右键选择 New。
 
@@ -164,7 +177,6 @@
        * create at $date$
        */
        ```
-      ```
 
     * 文件、类注释
 
@@ -172,14 +184,14 @@
 
       ClassHeader 模板：
 
-      ```Java
+    ```Java
       /**
        * class description here
        * @author ${USER}
        * @version 1.0.0
        * @since ${YEAR}-${MONTH}-${DAY}
        */
-      ```
+    ```
 
       FileHeader模板：
 
@@ -237,7 +249,7 @@
 
       > 类似地，我们也可以建立 Adapter、单例等等的模板代码。
 
-* 立即停止 Android Studio 编译
+* 立即停止AndroidStudio编译
 
   一个命令就可以停止它！
 
