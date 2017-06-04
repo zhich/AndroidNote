@@ -1,11 +1,13 @@
 ## 目录
 - [性能调优工具Hugo](#性能调优工具hugo)
-
+- [强大的调试器工具Stetho](#强大的调试器工具stetho)
+- [调试手机中数据库Android-Debug-Database](#调试手机中数据库android-debug-database)
 
 
 
 
 ### 性能调优工具Hugo
+
 在进行Android性能调优、减少应用卡顿时，寻找可优化的code是一个必要的过程。如何发现应用中的耗时任务甚至是耗时函数呢，如果可以在log中打印**每个方法的执行时间**，甚至把执行方法时的**输入输出参数**同时打印，绝对是非常棒的功能。
 
 幸运的是jake Wharton大神已经做出了这样的工具：[Hugo](https://github.com/JakeWharton/hugo)。
@@ -63,3 +65,11 @@ public class MainActivity extends Activity {
 ```
 
 > 打印日志只会在debug builds发生，注解也不会在任何编译后的class文件出现。完全不影响非debug builds。
+
+### 强大的调试器工具Stetho
+
+[Stetho，一个功能强大的 Android 应用调试桥](http://www.jianshu.com/p/38d8324b126a)
+
+### 调试手机中数据库Android-Debug-Database
+
+[调试手机中数据库的福音：Android-Debug-Database](http://www.jianshu.com/p/89ccae3e590b)
