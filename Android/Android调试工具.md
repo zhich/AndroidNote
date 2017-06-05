@@ -72,7 +72,23 @@ public class MainActivity extends Activity {
 
 ### 调试手机中数据库Android-Debug-Database
 
-[调试手机中数据库的福音：Android-Debug-Database](http://www.jianshu.com/p/89ccae3e590b)
+- step1
+
+在 application 的 module 里面添加依赖
+
+```Groovy
+debugCompile 'com.amitshekhar.android:debug-db:1.0.0'
+```
+
+- step2
+
+启动应用，然后在 logcat 中看到这么一行
+
+```Java
+D/DebugDB: Open http://xxx.xxx.xxx.xxx:8080 in your browser
+```
+
+把它复制到你电脑的浏览器，你就可以看到你的 App 中的数据库，和 SharedPreferences.
 
 ### Findbugs
 
