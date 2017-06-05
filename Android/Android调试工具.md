@@ -2,7 +2,7 @@
 - [性能调优工具Hugo](#性能调优工具hugo)
 - [强大的调试器工具Stetho](#强大的调试器工具stetho)
 - [调试手机中数据库Android-Debug-Database](#调试手机中数据库android-debug-database)
-
+- [Findbugs](#findbugs)
 
 
 
@@ -73,3 +73,9 @@ public class MainActivity extends Activity {
 ### 调试手机中数据库Android-Debug-Database
 
 [调试手机中数据库的福音：Android-Debug-Database](http://www.jianshu.com/p/89ccae3e590b)
+
+### Findbugs
+
+[FindBugs在AndroidStudio上的应用](http://blog.csdn.net/fengyuzhengfan/article/details/50775170)
+
+[Android Studio 插件--Findbugs](http://blog.csdn.net/atangsir/article/details/50731550)
