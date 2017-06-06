@@ -295,8 +295,17 @@
 
   可根据 Layout 自动生成该 Layout 中的 View 在 Java 中的 findViewById 代码。
 
+* Exynap
 
+  [Exynap](http://exynap.com/) 一个帮助开发者自动生成样板代码的 AndroidStudio 插件。
 
+* Android Methods Count
+
+  高效统计 Android 开源库的方法数。
+
+* AndroidLocalizationer
+
+  可用于将项目中的 string 资源自动翻译为其他语言的 Android Studio/IntelliJ IDEA 插件。
 
 
 
