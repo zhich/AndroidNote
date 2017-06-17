@@ -44,3 +44,4 @@
 ### Git
 
 - [常用git命令](https://github.com/zhich/Note/blob/master/Git/常用git命令.md)
+- [采用Git-flow方式打造简单高效的Git工作流](https://github.com/zhich/Note/blob/master/Git/采用Git-flow方式打造简单高效的Git工作流.md)
