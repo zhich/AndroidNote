@@ -10,6 +10,7 @@
   - [查看本地和远程分支](#查看本地和远程分支)
   - [删除本地分支](#删除本地分支)
   - [删除远程分支](#删除远程分支)
+  - [误删分支恢复方法](#误删分支恢复方法)
 - [其它](#其它)
   - [查看状态](#查看状态)
   - [add并commit](#add并commit)
@@ -73,6 +74,19 @@ git branch -D branch-name
 ```sh
 git push origin --delete branch-name
 ```
+
+#### 误删分支恢复方法
+
+**删除分支 feature_ocr**
+
+```sh
+git branch -D feature_ocr
+```
+
+**恢复步骤如下**
+
+1. 使用 **git log -g** 找回之前提交的 commit；
+2. 使用 **git branch feature_ocr[新分支] commit_id** 命令创建一个分支。
 
 ### 其它
 
