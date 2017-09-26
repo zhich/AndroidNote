@@ -7,6 +7,7 @@
 - [Android](#android)
 - [Java](#java)
 - [Git](#git)
+- [Tool](#tool)
 
 
 ### Android
@@ -44,3 +45,7 @@
 
 - [常用git命令](https://github.com/zhich/Note/blob/master/Git/常用git命令.md)
 - [采用Git-flow方式打造简单高效的Git工作流](https://github.com/zhich/Note/blob/master/Git/采用Git-flow方式打造简单高效的Git工作流.md)
+
+### Tool
+
+- [关闭sublime自动检测更新提示](https://github.com/zhich/Note/blob/master/Tool/关闭sublime自动检测更新提示.md)
