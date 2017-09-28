@@ -48,4 +48,4 @@
 
 ### Tool
 
-- [关闭sublime自动检测更新提示](https://github.com/zhich/Note/blob/master/Tool/关闭sublime自动检测更新提示.md)
+- [sublime](https://github.com/zhich/Note/blob/master/Tool/sublime.md)
