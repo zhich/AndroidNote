@@ -53,7 +53,7 @@ step 3:
 
 **安装插件**
 
-要安装插件就要通过 Package install 命令来安装，通过 ctrl + shift + p快捷键呼出命令行，输入 install 进入到 Package install 模式下，然后查找 ConvertToUTF8。安装成功后会自动打开该插件的介绍，以及配置文件。然后我们就能看到刚才乱码的文件，已经可以用正确的编码格式打开了。
+要安装插件就要通过 Package install 命令来安装，通过 ctrl + shift + p 快捷键呼出命令行，输入 install 进入到 Package install 模式下，然后查找 ConvertToUTF8 . 安装成功后会自动打开该插件的介绍，以及配置文件。然后我们就能看到刚才乱码的文件，已经可以用正确的编码格式打开了。
 
 **卸载插件**
 
